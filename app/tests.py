@@ -65,6 +65,10 @@ class TestUrls(SimpleTestCase):
 
     def test_base_url(self):
      url = reverse('checkout')
-     self.assertEquals(resolve(url).func, views.checkout)           
+     self.assertEquals(resolve(url).func, views.checkout)
+
+    def test_base_url(self):
+     url = reverse('customerregistration')
+     self.assertEquals(resolve(url).func.view_class, views.CustomerRegistrationView)            
 
 
