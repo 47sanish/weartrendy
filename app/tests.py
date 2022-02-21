@@ -57,6 +57,10 @@ class TestUrls(SimpleTestCase):
 
     def test_base_url(self):
      url = reverse('login')
-     self.assertEquals(resolve(url).func.view_class, auth_views.LoginView)         
+     self.assertEquals(resolve(url).func.view_class, auth_views.LoginView)
+
+    def test_base_url(self):
+     url = reverse('password_reset_complete')
+     self.assertEquals(resolve(url).func.view_class, auth_views.PasswordResetCompleteView)          
 
 
