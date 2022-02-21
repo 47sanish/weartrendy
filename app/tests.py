@@ -31,4 +31,8 @@ class TestUrls(SimpleTestCase):
      url = reverse('logout')
      self.assertEquals(resolve(url).func.view_class, auth_views.LogoutView)
 
+    def test_base_url(self):
+     url = reverse('passwordchange')
+     self.assertEquals(resolve(url).func.view_class, auth_views.PasswordChangeView)
+
 
