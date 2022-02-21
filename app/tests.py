@@ -37,6 +37,10 @@ class TestUrls(SimpleTestCase):
 
     def test_base_url(self):
      url = reverse('orders')
-     self.assertEquals(resolve(url).func, views.orders) 
+     self.assertEquals(resolve(url).func, views.orders)
+
+    def test_base_url(self):
+     url = reverse('mobile')
+     self.assertEquals(resolve(url).func, views.mobile)   
 
 
